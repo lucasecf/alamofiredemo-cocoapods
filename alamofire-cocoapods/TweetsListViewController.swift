@@ -59,18 +59,5 @@ extension TweetsListViewController: UITableViewDataSource {
 }
 
 extension TweetsListViewController: UITableViewDelegate {
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        
-        let tweet = tweets[indexPath.row] as NSDictionary
-        let id = tweet["id"] as Int
-        
-        Alamofire.request(.DELETE, "http://webdemo-itunesu.rhcloud.com/users/1/tweets/\(id)").responseJSON { (_, _, JSON, _) in
-            
-            self.tweets.removeObject(tweet)
-            dispatch_async(dispatch_get_main_queue(), {
-                self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
-            })
-            
-        }
-    }
+   
 }
