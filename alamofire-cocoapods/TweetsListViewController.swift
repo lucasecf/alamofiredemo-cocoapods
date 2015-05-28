@@ -34,7 +34,7 @@ class TweetsListViewController: UIViewController {
             .responseJSON { (_, _, JSON, _) in
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    self.tweets = NSMutableArray(array: JSON as NSArray)
+                    self.tweets = NSMutableArray(array: JSON as! NSArray)
                     self.tableView.reloadData()
                 })
         }
@@ -49,9 +49,9 @@ extension TweetsListViewController: UITableViewDataSource {
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("TweetCell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("TweetCell", forIndexPath: indexPath) as! UITableViewCell
         
-        let tweet = tweets[indexPath.row] as NSDictionary
+        let tweet = tweets[indexPath.row] as! NSDictionary
         cell.textLabel?.text = tweet["message"] as? String
         
         return cell
