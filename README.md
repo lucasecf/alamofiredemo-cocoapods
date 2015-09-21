@@ -1,6 +1,11 @@
 # alamofiredemo-cocoapods
 Uma pequena aplicação exercício da video aula do iTunesU - IFCE
 
+# Tecnologias
+* Xcode 6.4
+* Swift 1.2
+* Alamofire 1.1
+
 # Como rodar
 
 1. Instale o [cocoapods](http://cocoapods.org/) na sua máquina, caso ainda não o tenha
