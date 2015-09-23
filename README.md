@@ -2,7 +2,8 @@
 Uma pequena aplicação exercício da video aula do iTunesU - IFCE
 
 # Tecnologias
-* Xcode 6.4
+* iOS 8
+* Xcode 6.4 ([Baixe aqui](http://developer.apple.com/devcenter/download.action?path=/Developer_Tools/Xcode_6.4/Xcode_6.4.dmg))
 * Swift 1.2
 * Alamofire 1.1
 
